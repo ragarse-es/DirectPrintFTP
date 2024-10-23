@@ -8,6 +8,10 @@
 * This template provides the user the basic implementation OF the mapp component
 * MpReport. It is possible to create PDF files in the application.
 * Also it is handled to send this generated report to an external FTP server (printer)
+*
+*
+* ¡¡¡IMPORTANT!!! It is not implemented the error handling. This is up to the programmer
+* who is going to use this template.
 *********************************************************************************)  
 
 PROGRAM _INIT
@@ -113,7 +117,8 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		PRINT_ERROR:
-		  
+			// ¡¡¡IMPORTANT!!! It is NOT implemented the error handling. This is up TO the programmer
+			// who is going TO use this template.
 
 	END_CASE;
 	
