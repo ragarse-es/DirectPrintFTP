@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gReport" Type="mpreportcore">
+    <Group ID="MpReport">
+      <Group ID="Settings">
+        <Property ID="ResourceDeviceName" Value="MEDIA" />
+        <Group ID="LanguageDependent">
+          <Group ID="[0]">
+            <Property ID="Language" Value="en" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="PageLayouts">
+        <Group ID="[0]">
+          <Property ID="Name" Value="Default" />
+          <Property ID="Margins" Value="2" />
+        </Group>
+      </Group>
+      <Group ID="Styles">
+        <Group ID="Text">
+          <Group ID="[0]">
+            <Property ID="Name" Value="Default" />
+            <Property ID="NumberOfDecimalPlaces" Value="2" />
+          </Group>
+          <Group ID="[1]">
+            <Property ID="Name" Value="Bold28Orange" />
+            <Property ID="Style" Value="1" />
+            <Property ID="Size" Value="28" />
+            <Property ID="Color" Value="FF9900" />
+          </Group>
+          <Group ID="[2]">
+            <Property ID="Name" Value="Bold10Black" />
+            <Property ID="Style" Value="1" />
+            <Property ID="NumberOfDecimalPlaces" Value="2" />
+          </Group>
+          <Group ID="[3]">
+            <Property ID="Name" Value="BoldItalic10Orange" />
+            <Property ID="Style" Value="3" />
+            <Property ID="Color" Value="FF9900" />
+          </Group>
+          <Group ID="[4]">
+            <Property ID="Name" Value="Italic10Black" />
+            <Property ID="Style" Value="2" />
+          </Group>
+          <Group ID="[5]">
+            <Property ID="Name" Value="Italic10Orange" />
+            <Property ID="Style" Value="2" />
+            <Property ID="Color" Value="FF9900" />
+          </Group>
+          <Group ID="[6]">
+            <Property ID="Name" Value="Bold16Orange" />
+            <Property ID="Style" Value="1" />
+            <Property ID="Size" Value="16" />
+            <Property ID="Color" Value="FF9900" />
+          </Group>
+        </Group>
+        <Group ID="Table">
+          <Group ID="[0]">
+            <Property ID="Name" Value="Default" />
+          </Group>
+          <Group ID="[1]">
+            <Property ID="Name" Value="NoBorder" />
+            <Property ID="BorderWidth" Value="0" />
+          </Group>
+        </Group>
+        <Group ID="Line">
+          <Group ID="[0]">
+            <Property ID="Name" Value="Default" />
+          </Group>
+          <Group ID="[1]">
+            <Property ID="Name" Value="LineJump" />
+          </Group>
+        </Group>
+        <Group ID="Chart">
+          <Group ID="PieChart">
+            <Group ID="[0]">
+              <Property ID="Name" Value="Default" />
+            </Group>
+            <Group ID="[1]">
+              <Property ID="Name" Value="DefaultPie" />
+            </Group>
+          </Group>
+          <Group ID="LineChart">
+            <Group ID="[0]">
+              <Property ID="Name" Value="LineGraphStyle" />
+            </Group>
+          </Group>
+          <Group ID="BarChart">
+            <Group ID="[0]">
+              <Property ID="Name" Value="DefaultBars" />
+            </Group>
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="Contents">
+        <Group ID="[0]">
+          <Property ID="Name" Value="TextHeader" />
+          <Selector ID="[0]" Value="Value">
+            <Selector ID="Value">
+              <Property ID="ProcessVariable" Value="::Report:HeaderValue" />
+            </Selector>
+            <Property ID="HorizontalAlign" Value="1" />
+            <Property ID="TextStyle" Value="Bold28Orange" />
+          </Selector>
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Name" Value="TextInformation" />
+          <Selector ID="[0]" Value="Value">
+            <Selector ID="Value">
+              <Property ID="ProcessVariable" Value="::Report:InformationValue" />
+            </Selector>
+            <Property ID="HorizontalAlign" Value="1" />
+            <Property ID="TextStyle" Value="BoldItalic10Orange" />
+          </Selector>
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Name" Value="TextFooter" />
+          <Selector ID="[0]" Value="Value">
+            <Selector ID="Value">
+              <Property ID="ProcessVariable" Value="::Report:FooterValue" />
+            </Selector>
+            <Property ID="TextStyle" Value="Italic10Black" />
+          </Selector>
+        </Group>
+        <Group ID="[3]">
+          <Property ID="Name" Value="Line1" />
+          <Selector ID="[0]" Value="Value">
+            <Selector ID="Value">
+              <Property ID="ProcessVariable" Value="::Report:Line1" />
+            </Selector>
+            <Property ID="TextStyle" Value="Bold10Black" />
+          </Selector>
+        </Group>
+        <Group ID="[4]">
+          <Property ID="Name" Value="Line2" />
+          <Selector ID="[0]" Value="Line" />
+          <Selector ID="[1]" Value="Value">
+            <Selector ID="Value">
+              <Property ID="ProcessVariable" Value="::Report:Line2" />
+            </Selector>
+            <Property ID="TextStyle" Value="Bold10Black" />
+          </Selector>
+        </Group>
+        <Group ID="[5]">
+          <Property ID="Name" Value="Line3" />
+          <Selector ID="[0]" Value="Value">
+            <Selector ID="Value">
+              <Property ID="ProcessVariable" Value="::Report:Line3" />
+            </Selector>
+            <Property ID="TextStyle" Value="Bold10Black" />
+          </Selector>
+        </Group>
+        <Group ID="[6]">
+          <Property ID="Name" Value="EmptyLine" />
+          <Selector ID="[0]" Value="EmptyLine" />
+        </Group>
+      </Group>
+      <Group ID="Reports">
+        <Group ID="[0]">
+          <Property ID="Name" Value="CompleteReport" />
+          <Property ID="PageLayout" Value="Default" />
+          <Property ID="Header" Value="TextHeader" />
+          <Property ID="Footer" Value="TextFooter" />
+          <Group ID="[0]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="EmptyLine" />
+            </Group>
+          </Group>
+          <Group ID="[1]">
+            <Group ID="Heading">
+              <Property ID="Text" Value="" />
+              <Property ID="HorizontalAlign" Value="1" />
+              <Property ID="TextStyle" Value="Default" />
+            </Group>
+            <Group ID="[0]">
+              <Property ID="Content" Value="TextInformation" />
+            </Group>
+          </Group>
+          <Group ID="[2]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="EmptyLine" />
+            </Group>
+          </Group>
+          <Group ID="[3]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="Line1" />
+            </Group>
+          </Group>
+          <Group ID="[4]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="EmptyLine" />
+            </Group>
+          </Group>
+          <Group ID="[5]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="Line2" />
+            </Group>
+          </Group>
+          <Group ID="[6]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="EmptyLine" />
+            </Group>
+          </Group>
+          <Group ID="[7]">
+            <Group ID="[0]">
+              <Property ID="Content" Value="Line3" />
+            </Group>
+          </Group>
+        </Group>
+      </Group>
+    </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
+  </Element>
+</Configuration>

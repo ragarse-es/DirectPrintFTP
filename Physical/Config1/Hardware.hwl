@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="09/25/2024 11:30:47" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="4PPC70_0573_20B" Type="4PPC70.0573-20B" X="100" Y="100" />
+    <Module Name="4XP0043.00-00B" Type="4XP0043.00-00B" X="220.4" Y="256" />
+    <Module Name="X20BB80a" Type="X20BB80" X="220.4" Y="366" />
+    <Module Name="X20BM31a" Type="X20BM31" X="258.4" Y="366" />
+    <Module Name="X20SM1436" Type="X20SM1436" X="258.4" Y="366" />
+    <Module Name="X20TB12a" Type="X20TB12" X="271.4" Y="392" />
+    <Module Name="X20BM11a" Type="X20BM11" X="284.4" Y="366" />
+    <Module Name="X20DI9371" Type="X20DI9371" X="284.4" Y="366" />
+    <Module Name="X20TB12c" Type="X20TB12" X="284.4" Y="393" />
+    <Module Name="X20BM11b" Type="X20BM11" X="297.4" Y="366" />
+    <Module Name="X20DO8322" Type="X20DO8322" X="297.4" Y="366" />
+    <Module Name="X20TB12d" Type="X20TB12" X="297.4" Y="393" />
+    <Module Name="X20PS9400" Type="X20PS9400" X="245.4" Y="366" />
+    <Module Name="X20TB12b" Type="X20TB12" X="245.4" Y="393" />
+    <Module Name="X20BC0083" Type="X20BC0083" X="220.4" Y="366" />
+  </Modules>
+  <Links>
+    <Link From="4PPC70_0573_20B" To="X20BC0083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="136.2" Y="202" />
+      <Point X="136.2" Y="202" />
+      <Point X="136.2" Y="207" />
+      <Point X="136.2" Y="441" />
+      <Point X="219.4" Y="441" />
+      <Point X="234.4" Y="441" />
+      <Point X="234.4" Y="441" />
+    </Link>
+    <Link From="4PPC70_0573_20B" To="4XP0043.00-00B" FromPort="IF5" ToPort="X2X1" IsRoutedByUser="False">
+      <Point X="184.2" Y="202" />
+      <Point X="184.2" Y="202" />
+      <Point X="184.2" Y="207" />
+      <Point X="184.2" Y="325" />
+      <Point X="284.4" Y="325" />
+      <Point X="284.4" Y="317" />
+      <Point X="284.4" Y="312" />
+      <Point X="284.4" Y="312" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

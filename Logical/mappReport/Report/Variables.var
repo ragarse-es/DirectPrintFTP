@@ -1,0 +1,31 @@
+(*********************************************************************************
+ * Copyright: Bernecker+Rainer
+ * Author:    novellaj
+ * Created:   February 15, 2018/8:29 AM 
+ *********************************************************************************)
+(*Control report variables*)
+VAR
+	PrintStep : StepPrint_enum;
+	Ctrl : REPORT_CTRL_TYP; (*Main report control variable*)
+END_VAR
+(*Variables to send the file to the external FTP Server*)
+VAR
+	GenerateAndPrint : BOOL := FALSE; (*Variable to start the process of generate the Report and sent it to print*)
+	DevLink_0 : DevLink; (*Function block to link with the External FTP Server*)
+	FileCopy_0 : FileCopy; (*Function block to copy a file from this PLC to the External FTP Server*)
+	DevUnlink_0 : DevUnlink; (*Function block to close the communication with the External FTP Server*)
+	NewDeviceName : STRING[80] := 'IODevice'; (*Name of the device name that is going to create the DevLink FB. It should NOT exist in the Devices files created in the CPU configuration*)
+	ParamString : STRING[80] := '/SIP=10.10.10.100 /PROTOCOL=ftp /USER=admin /PASSWORD=admin'; (*String with the parametrization of the connection to the External FTP Server. Contains IP, potocol (FTP), user and password*)
+	SourceFileName : STRING[80]; (*Source file name. Extracted from the mpReport result*)
+	SourceDeviceName : STRING[80] := 'USER'; (*Name of the device from where the FileCopy is going to get the file. In this case is USER because the mpReport save the files in the USER device. This partition must exist in the Device files created in the CPU configuration*)
+	DestFileName : STRING[80] := 'SentFile.pdf'; (*Name to write in the new file copied in the destination FTP Server*)
+END_VAR
+(*String Variables to set the Report*)
+VAR
+	HeaderValue : STRING[200] := 'REPORT';
+	InformationValue : STRING[200] := 'Printing Brother';
+	Line1 : STRING[200] := 'Line1';
+	Line2 : STRING[200] := 'Line2';
+	Line3 : STRING[200] := 'Line3';
+	FooterValue : STRING[200] := 'Page 1';
+END_VAR
